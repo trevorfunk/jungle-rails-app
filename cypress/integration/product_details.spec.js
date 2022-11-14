@@ -6,7 +6,7 @@ describe("it opens the jungle store", () => {
     // we include it in our beforeEach function so that it runs before each test
     cy.visit("http://127.0.0.1:43437/");
   });
-  it("There is 2 products on the page", () => {
-    cy.get(".products article").should("have.length", 2);
+  it("Navigates user to product detail page when user clicks on product", () => {
+    cy.get('[alt="Scented Blade"]').click();
   });
 });
